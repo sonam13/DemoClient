@@ -16,6 +16,7 @@ public class DemoClientController {
 	private String serverUrl;
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public @ResponseBody String getMsg() {
+		System.out.println("url is" +serverUrl);
 		return restTemplate.getForObject(serverUrl, String.class );
 	}
 }
